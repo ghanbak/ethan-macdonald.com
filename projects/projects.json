@@ -1,0 +1,37 @@
+[
+    {
+        "age": 0, 
+        "id": "homes-by-legacy", 
+        "imageUrl": "img/projects/legacy-grid.jpg", 
+        "name": "Homes by Legacy",
+        "projectUrl": "http://homesbylegacybuilders.com",
+        "status": "complete"
+    },
+
+    {
+        "age": 2, 
+        "id": "harmony-of-keys", 
+        "imageUrl": "img/projects/harmony-grid.jpg", 
+        "name": "Harmony of Keys",
+        "projectUrl": "http://harmonyofkeys.com",
+        "status": "complete"
+    },
+
+    {
+        "age": 1, 
+        "id": "watermark", 
+        "imageUrl": "img/projects/watermark-grid.jpg", 
+        "name": "Watermark Designs",
+        "projectUrl": "#",
+        "status": "in progress"
+    },
+
+    {
+        "age": 3, 
+        "id": "first-efc", 
+        "imageUrl": "img/projects/firstefc-grid.jpg", 
+        "name": "First EFC",
+        "projectUrl": "#",
+        "status": "in progress"
+    }
+]

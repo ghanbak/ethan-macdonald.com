@@ -1,0 +1,95 @@
+.home-projects {
+	li {
+		padding: 0 !important;
+	}
+
+  .thumbnail {
+    position: relative;
+    @include transform-style(preserve-3d);
+    @include transition(all 0.4s);
+    overflow: hidden;
+
+    .project-info {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+
+    .status {
+
+      &.complete {
+        display: none;
+        visibility: hidden;
+      }
+
+      &.in.progress {
+        font-size: rem-calc(12);
+        border-radius: 3px;
+        background: $yellow;
+        padding: rem-calc(3 5);
+        display: inline;
+        border: none;
+        line-height: 1;
+        color: $white;
+        margin-top: rem-calc(5);
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      width: 0%;
+      height: 0%;
+      background: rgba($darkBlue, 0.9);
+      visibility: hidden;
+      border-radius: 100%;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      @include transition(all 0.4s);
+    }
+
+    img {
+      opacity: 0.25;
+      @include transition(all 0.4s);
+    }
+
+    a {
+      color: $blue;
+      display: block;
+      @include transition(all 0.4s $ease-in-out-back);
+    }
+
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    &:hover {
+      @include transition(all 0.4s);
+
+      .overlay {
+        visibility: visible;
+        width: 150%;
+        height: 150%;
+        @include transition(all 0.4s);
+        background: rgba($darkBlue, 0.9);
+      }
+
+      img {
+        opacity: 0.6;
+        @include transform(scale(1.2));
+        @include transition(all 0.4s);
+      }
+
+      h3 a {
+        color: $white;
+        @include transition(all 0.4s $ease-in-out-back);
+        @include transform(scale(1.1));
+      }
+    }
+  }
+}
+

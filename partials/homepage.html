@@ -1,0 +1,21 @@
+<header></header>
+<div class="projects">
+  <div ng-controller="HomeProjectsCtrl">
+    <!--Body content-->
+    <ul class="home-projects small-block-grid-1 medium-block-grid-2 xlarge-block-grid-4">
+      <li ng-repeat="project in projects" class="ng-repeat">
+        <div class="thumbnail project-listing">
+          <a href="{{project.projectUrl}}" target="_blank" class="thumb">
+            <div class="overlay"></div>
+            <img ng-src="{{project.imageUrl}}" title="{{project.name}}" alt="{{project.name}}" />
+          </a>
+          <div class="project-info">
+            <h3><a href="{{project.projectUrl}}" target="_blank">{{project.name}}</a></h3>
+            <div class="status {{project.status}}">{{project.status}}</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<footer></footer>

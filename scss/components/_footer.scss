@@ -1,0 +1,78 @@
+footer {
+  background: $blue;
+  padding: rem-calc(70 0 0);
+  text-align: center;
+  color: $blueTXT;
+
+  .footer {
+    @include grid-row();
+  }
+
+  .inline-list {
+    margin-bottom: rem-calc(10);
+  }
+
+  .inline-list > li {
+    float: none;
+    display: inline-block;
+    @include transform-style(preserve-3d);
+  }
+
+  .inline-list li a {
+    @include transform-style(preserve-3d);
+
+    i {
+      @include transform(scale(1));
+      @include backface-visibility(visible);
+      @include perspective(0px);
+      @include transition(all 0.5s $ease-in-out-back);
+    }
+
+    &:hover {
+      color: $lightBlue;
+
+      i {
+        @include transform(scale(1.5));
+      }
+    }
+  }
+
+  .about {
+    @include transform-style(preserve-3d);
+  }
+
+  .about img {
+    border-radius: 100%;
+    border: 3px solid $darkBlue;
+    margin-bottom: 1rem;
+    @include transform(scale(1));
+    @include backface-visibility(visible);
+    @include perspective(0px);
+    @include transition(all 0.5s $ease-in-out-back);
+
+    &:hover {
+      @include transform(scale(1.25));
+    }
+  }
+
+  .about p {
+    font-size: rem-calc(24);
+  }
+
+  p, a {
+    color: $blueTXT;
+    font-weight: 200;
+  }
+
+  .footer-bottom {
+    @include grid-column($columns: 6, $center: true);
+    border-top: 1px solid $lightBlue;
+    padding: rem-calc(20 0 0);
+  }
+
+  .copyright p {
+    font-size: rem-calc(12);
+    color: darken($blueTXT, 10%);
+    font-weight: normal;
+  }
+}
